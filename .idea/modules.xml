@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Tor-ScreenRec.iml" filepath="$PROJECT_DIR$/Tor-ScreenRec.iml" />
-      <module fileurl="file://$PROJECT_DIR$/TorScreenRec.iml" filepath="$PROJECT_DIR$/TorScreenRec.iml" />
+      <module fileurl="file://D:\Android\Workspace\Tor-ScreenRec\TorScreenRec.iml" filepath="D:\Android\Workspace\Tor-ScreenRec\TorScreenRec.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/roottools/roottools.iml" filepath="$PROJECT_DIR$/roottools/roottools.iml" />
       <module fileurl="file://$PROJECT_DIR$/tiles/tiles.iml" filepath="$PROJECT_DIR$/tiles/tiles.iml" />
