@@ -3,6 +3,7 @@ package dev.tornaco.torscreenrec.control;
 import android.app.Service;
 import android.content.Intent;
 import android.os.Binder;
+import android.os.Build;
 import android.os.IBinder;
 import android.support.annotation.Nullable;
 import android.util.Log;
@@ -38,17 +39,23 @@ public class FloatingControlService extends Service implements FloatingControlle
 
         TorScreenRecApp app = (TorScreenRecApp) getApplication();
 
-        if (SettingsCompat.canDrawOverlays(app.getTopActivity())) {
-            show();
-        } else {
+        if (SettingsCompat.canDrawOverlays(app.getTopActivity())
+                || Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             try {
-                SettingsCompat.manageDrawOverlays(app.getTopActivity());
+                show();
+                return START_STICKY;
             } catch (Throwable e) {
                 Toast.makeText(getApplicationContext(), Log.getStackTraceString(e), Toast.LENGTH_LONG).show();
             }
-
-            SettingsProvider.get().putBoolean(SettingsProvider.Key.FLOAT_WINDOW, false);
         }
+
+        try {
+            SettingsCompat.manageDrawOverlays(app.getTopActivity());
+        } catch (Throwable e) {
+            Toast.makeText(getApplicationContext(), Log.getStackTraceString(e), Toast.LENGTH_LONG).show();
+        }
+
+        SettingsProvider.get().putBoolean(SettingsProvider.Key.FLOAT_WINDOW, false);
 
         return START_STICKY;
     }

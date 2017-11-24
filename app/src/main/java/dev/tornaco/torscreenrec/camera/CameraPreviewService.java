@@ -5,6 +5,7 @@ import android.app.Service;
 import android.content.Intent;
 import android.graphics.PixelFormat;
 import android.os.Binder;
+import android.os.Build;
 import android.os.IBinder;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -79,6 +80,24 @@ public class CameraPreviewService extends Service {
         return mBinder;
     }
 
+    private void showPreviewWithOverlayChecked(WindowSize size) {
+        // Check permission.
+        if (SettingsCompat.canDrawOverlays(TorScreenRecApp.getApp().getTopActivity())
+                || Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            try {
+                showPreview(size);
+            } catch (Throwable e) {
+                Toast.makeText(getApplicationContext(), Log.getStackTraceString(e), Toast.LENGTH_LONG).show();
+            }
+        } else {
+            try {
+                SettingsCompat.manageDrawOverlays(TorScreenRecApp.getApp().getTopActivity());
+            } catch (Throwable e) {
+                Toast.makeText(getApplicationContext(), Log.getStackTraceString(e), Toast.LENGTH_LONG).show();
+            }
+        }
+    }
+
     public void showPreview(WindowSize size) {
         if (isShowing()) {
             return;
@@ -106,7 +125,10 @@ public class CameraPreviewService extends Service {
         mFloatContainerParams = new LayoutParams(
                 mSize.w,
                 mSize.h,
-                LayoutParams.TYPE_SYSTEM_ALERT,
+                Build.VERSION.SDK_INT
+                        >= Build.VERSION_CODES.O ?
+                        WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY
+                        : WindowManager.LayoutParams.TYPE_SYSTEM_ALERT,
                 LayoutParams.FLAG_NOT_FOCUSABLE,
                 PixelFormat.TRANSLUCENT);
         mFloatContainerParams.y = 0;
@@ -204,7 +226,7 @@ public class CameraPreviewService extends Service {
                         @Override
                         public void accept(Boolean granted) throws Exception {
                             if (granted) {
-                                CameraPreviewService.this.showPreview(size);
+                                CameraPreviewService.this.showPreviewWithOverlayChecked(size);
                             } else {
                                 SettingsProvider.get().putBoolean(SettingsProvider.Key.CAMERA, false);
                             }

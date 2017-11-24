@@ -28,7 +28,7 @@ public class Installer {
     public static final String BRIDGE_PACKAGE_NAME = "dev.nick.systemrecapi";
 
     private static final String SRC_PATH_PLATFORM = "app-release-platform.apk";
-    private static final String SRC_PATH_TORNACO = "app-release.apk";
+    private static final String SRC_PATH_TORNACO = "app-release-platform.apk";
     private static final String TMP_APK_NAME = "tmp.apk";
     private static final String DEST_PATH = "/system/app/RecBridge.apk";
     private static final String DEST_PATH_V2 = "/system/app/RecBridge/RecBridge.apk";

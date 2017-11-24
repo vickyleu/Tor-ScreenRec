@@ -17,7 +17,8 @@ public abstract class MediaTools {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             Intent sharingIntent = new Intent(Intent.ACTION_SEND);
             sharingIntent.setType("video/mp4");
-            sharingIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse("file://" + imageFile.getAbsolutePath()));
+            sharingIntent.putExtra(Intent.EXTRA_STREAM,
+                    FileProvider.getUriForFile(context, BuildConfig.APPLICATION_ID + ".provider", imageFile));
             sharingIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
             sharingIntent.putExtra(Intent.EXTRA_SUBJECT, imageFile.getName());
             Intent chooserIntent = Intent.createChooser(sharingIntent, null);

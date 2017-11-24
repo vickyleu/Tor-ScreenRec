@@ -3,8 +3,8 @@ package dev.tornaco.torscreenrec.ui.widget;
 import android.content.Context;
 import android.graphics.PixelFormat;
 import android.graphics.Rect;
+import android.os.Build;
 import android.os.RemoteException;
-import android.support.v4.content.Loader;
 import android.support.v4.view.GestureDetectorCompat;
 import android.view.GestureDetector;
 import android.view.Gravity;
@@ -94,23 +94,23 @@ public class FloatView extends FrameLayout {
     public FloatView(final TorScreenRecApp context) {
         super(context);
 
-        detectorCompat = new GestureDetectorCompat(context, new GestureDetector.SimpleOnGestureListener(){
+        detectorCompat = new GestureDetectorCompat(context, new GestureDetector.SimpleOnGestureListener() {
             @Override
             public boolean onDoubleTap(MotionEvent e) {
-                Toast.makeText(context, "onDoubleTap", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(context, "onDoubleTap", Toast.LENGTH_SHORT).show();
                 return true;
             }
 
             @Override
             public boolean onSingleTapUp(MotionEvent e) {
-                Toast.makeText(context, "onSingleTapUp", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(context, "onSingleTapUp", Toast.LENGTH_SHORT).show();
                 return true;
             }
 
             @Override
             public void onLongPress(MotionEvent e) {
-                Toast.makeText(context, "onLongPress", Toast.LENGTH_SHORT).show();
-                inDragMode= true;
+                //Toast.makeText(context, "onLongPress", Toast.LENGTH_SHORT).show();
+                inDragMode = true;
                 super.onLongPress(e);
             }
 
@@ -121,9 +121,9 @@ public class FloatView extends FrameLayout {
                 float y = e2.getY() - e1.getY();
 
                 if (x > 0) {
-                    Toast.makeText(context, "RG:" + x, Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(context, "RG:" + x, Toast.LENGTH_SHORT).show();
                 } else if (x < (0)) {
-                    Toast.makeText(context, "L:" + x, Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(context, "L:" + x, Toast.LENGTH_SHORT).show();
                 }
 
 
@@ -170,7 +170,11 @@ public class FloatView extends FrameLayout {
         mLp.width = WindowManager.LayoutParams.WRAP_CONTENT;
         mLp.height = WindowManager.LayoutParams.WRAP_CONTENT;
         mLp.flags = WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE;
-        mLp.type = WindowManager.LayoutParams.TYPE_SYSTEM_ALERT;
+        mLp.type =
+                Build.VERSION.SDK_INT
+                        >= Build.VERSION_CODES.O ?
+                        WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY
+                        : WindowManager.LayoutParams.TYPE_SYSTEM_ALERT;
 
         OnTouchListener touchListener = new OnTouchListener() {
             private float touchX;
@@ -190,17 +194,17 @@ public class FloatView extends FrameLayout {
                         inDragMode = false;
                         break;
                     case MotionEvent.ACTION_MOVE:
-                       if (inDragMode) {
-                           int dx = (int) (event.getRawX() - startX);
-                           int dy = (int) (event.getRawY() - startY);
-                           if ((dx * dx + dy * dy) > mTouchSlop) {
-                               isDragging = true;
-                               mLp.x = (int) (event.getRawX() - touchX);
-                               mLp.y = (int) (event.getRawY() - touchY);
-                               mWm.updateViewLayout(FloatView.this, mLp);
-                               return true;
-                           }
-                       }
+                        if (inDragMode) {
+                            int dx = (int) (event.getRawX() - startX);
+                            int dy = (int) (event.getRawY() - startY);
+                            if ((dx * dx + dy * dy) > mTouchSlop) {
+                                isDragging = true;
+                                mLp.x = (int) (event.getRawX() - touchX);
+                                mLp.y = (int) (event.getRawY() - touchY);
+                                mWm.updateViewLayout(FloatView.this, mLp);
+                                return true;
+                            }
+                        }
                         break;
                     case MotionEvent.ACTION_UP:
                     case MotionEvent.ACTION_CANCEL:
