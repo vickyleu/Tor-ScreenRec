@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!--Trandlate by Nicolas Darquea-->
+<!--Translated by Nicolas Darquea-->
 
 <resources>
     <!--Edit by tornaco, Remove unused-->
@@ -64,7 +64,7 @@
     <string name="navigation_drawer_open">Abrir cajón de navegación</string>
     <string name="no_audio_setting_warning">Para incluir audio, <b>toque aquí para ir a las Configuraciones y habilitar los permisos del micrófono para esta app</b></string>
     <string name="not_enough_storage">No hay suficiente espacio de almacenamiento</string>
-    <string name="not_projection">Missing media projection permission</string>
+    <string name="not_projection">Permiso para medios de proyección perdida</string>
     <string name="open_source">Código abierto</string>
     <string name="orientation_a">AUTO</string>
     <string name="orientation_l">Paisaje</string>
@@ -74,7 +74,7 @@
     <string name="preview_size_l">Grande</string>
     <string name="preview_size_n">Normal</string>
     <string name="preview_size_s">Pequeño</string>
-    <string name="quick_function">Función rápida</string>
+    <string name="quick_function">Funciones rápidas</string>
     <string name="quick_settings">Configuración rápida</string>
     <string name="recorder_description">Grabado desde pantalla con Tor ScreenRec</string>
     <string name="recorder_file_prefix">Recorder-</string>
@@ -84,11 +84,11 @@
     <string name="remote_err">Remoto error</string>
     <string name="report">Reportar</string>
     <string name="restart">Reiniciar android</string>
-    <string name="result_to_gif_fail">Fail to convert to GIF, please file a bug!</string>
-    <string name="result_to_gif_ok">Gif has been saved to:%s</string>
-    <string name="save_by_screenshot">Please save by take s screen shot.</string>
+    <string name="result_to_gif_fail">Error! al convertir a GIF, porfavor reportalo!</string>
+    <string name="result_to_gif_ok">El GIF ha sido grabado en:%s</string>
+    <string name="save_by_screenshot">Porfavor guarda tomando una screenshot.</string>
     <string name="save_qr_code">Guardar imagen</string>
-    <string name="screen_cast">Screen cast</string>
+    <string name="screen_cast">Grabadora</string>
     <string name="share">Compartir</string>
     <string name="show_touches">Mostrar toques</string>
     <string name="start_description">Toca para comenzar a grabar la pantalla de tu dispositivo</string>
@@ -99,13 +99,13 @@
     <string name="summary_audio">Incluir audio del micrófono</string>
     <string name="summary_auto_hide">Cerrar aplicación al grabar</string>
     <string name="summary_buy_intro">Si te gusta mi trabajo, sientete libre de donar!</string>
-    <string name="summary_camera">Mostrar una ventana flotante de la vista previa de la cámara, en la interfaz UI</string>
+    <string name="summary_camera">Ventana flotante de cámara</string>
     <string name="summary_donate">Ofréceme una taza de café:)</string>
     <string name="summary_magisk_install">No soportado aún</string>
     <string name="summary_normal_install">Intalar como una app de terceros, pero perderemos la característica de audio interno \"Submix\" y algunas otras características dependientes del ROOT.</string>
     <string name="summary_perm_require">Porfavor acepta los permisos para Capturar tu pantalla la próxima vez que se solicite.</string>
     <string name="summary_res_auto">AUTO</string>
-    <string name="summary_root_install">Instalar la app en "system/app" con acceso root, esta es la mejor manera de usar el framework de grabación, obtendrás todas las características! \\n\\nSin embargo, por ahora, esta manera sólo soporta en ROMs AOSP, cómo RR, LOS, Moke, Soda, PureNexus. Por favor, tenga cuidado y asegúrese que su dispositivo sea compatible.</string>
+    <string name="summary_root_install">Instalar la app en "system/app" con acceso root, esta es la mejor manera de usar el framework de grabación, obtendrás todas las características! \nSin embargo, por ahora, esta manera sólo es soportada en ROMs AOSP, cómo RR, LOS, Moke, Soda, PureNexus. Por favor, tenga cuidado y asegúrese que su dispositivo sea compatible.</string>
     <string name="summary_start_delay">Espera un momento antes de empezar a grabar</string>
     <string name="summary_storage">Encontrar vídeos en %1$s</string>
     <string name="summary_with_ad">Se puede cerrar al hacer clic una vez</string>
@@ -144,7 +144,7 @@
     <string name="title_pay_status_paid">He pagado</string>
     <string name="title_perm_require">Permisos</string>
     <string name="title_preview_size">Tamaño de vista previa</string>
-    <string name="title_recording_browser">Ver mis grabaciones</string>
+    <string name="title_recording_browser">Mis grabaciones</string>
     <string name="title_root_install">Instalar con ROOT</string>
     <string name="title_settings">Configuración</string>
     <string name="title_shake_action">Agitar para detener</string>
@@ -178,7 +178,7 @@
     <string name="warn_sdk_low">Esta APP fue hecha solamente para la versión de SDK mayor a Lollipop</string>
     <string name="warn_sdk_title">WTF</string>
     <string name="with_audio">Incluir audio del micrófono</string>
-    <string name="xposed_desc">Grabando la pantalla con todo el sistema de audio de salida</string>
+    <string name="xposed_desc">Grabando la pantalla con todo el sistema de salida de audio</string>
     <!--Edit by tornaco, Remove unused-->
     <!--<string name="abc_font_family_body_1_material">sans-serif</string>-->
     <!--<string name="abc_font_family_body_2_material">sans-serif-medium</string>-->
