@@ -45,6 +45,7 @@ public class SettingsProvider extends Observable {
         FLOAT_WINDOW_ALPHA(50),
         FLOAT_WINDOW_THEME(FloatControlTheme.DefaultDark.name()),
         FAME_RATE(30),
+        AUDIO_BITRATE_RATE_K(64),// *1024
         RESOLUTION(ValidResolutions.DESC[ValidResolutions.INDEX_MASK_AUTO]),
         ORIENTATION(Orientations.AUTO),
         USER_PROJECTION(false),

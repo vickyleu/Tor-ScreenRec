@@ -167,4 +167,5 @@
     <string name="title_install">Install</string>
     <string name="update_available">Bridge update</string>
     <string name="update_available_message">New bridge of version %1$s is now available, would you like to install now?</string>
+    <string name="title_bitrate_rate">Bitrate</string>
 </resources>

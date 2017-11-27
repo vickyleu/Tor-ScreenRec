@@ -165,4 +165,5 @@
     <string name="title_install">安装</string>
     <string name="update_available">框架更新</string>
     <string name="update_available_message">新版本（%1$s）的录屏框架可用，你现在要安装改更新吗？</string>
+    <string name="title_bitrate_rate">比特率</string>
 </resources>

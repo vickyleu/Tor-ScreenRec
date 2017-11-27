@@ -8,6 +8,7 @@ import java.util.List;
 import dev.nick.tiles.tile.Category;
 import dev.nick.tiles.tile.DashboardFragment;
 import dev.tornaco.torscreenrec.R;
+import dev.tornaco.torscreenrec.ui.tiles.AudioBitRateTile;
 import dev.tornaco.torscreenrec.ui.tiles.AudioSourceTile;
 import dev.tornaco.torscreenrec.ui.tiles.FloatControlAlphaTile;
 import dev.tornaco.torscreenrec.ui.tiles.FloatControlThemeTile;
@@ -18,7 +19,6 @@ import dev.tornaco.torscreenrec.ui.tiles.PreviewSizeDropdownTile;
 import dev.tornaco.torscreenrec.ui.tiles.ShakeTile;
 import dev.tornaco.torscreenrec.ui.tiles.ShowTouchTile;
 import dev.tornaco.torscreenrec.ui.tiles.SoundEffectTile;
-import dev.tornaco.torscreenrec.ui.tiles.StopOnVolumeTile;
 import dev.tornaco.torscreenrec.ui.tiles.StopWhenScreenOffTile;
 import dev.tornaco.torscreenrec.ui.tiles.StorageTile;
 import dev.tornaco.torscreenrec.ui.tiles.SwitchCameraTile;
@@ -51,6 +51,7 @@ public class SettingsFragment extends DashboardFragment {
         Category audio = new Category();
         audio.titleRes = R.string.category_audio;
         audio.addTile(new AudioSourceTile(getContext()));
+        audio.addTile(new AudioBitRateTile(getContext()));
 
         Category access = new Category();
         access.titleRes = R.string.category_accessibility;
@@ -58,7 +59,6 @@ public class SettingsFragment extends DashboardFragment {
         access.addTile(new SoundEffectTile(getContext()));
         access.addTile(new StopWhenScreenOffTile(getContext()));
         access.addTile(new ShakeTile(getContext()));
-        access.addTile(new StopOnVolumeTile(getContext()));
 
         Category camera = new Category();
         camera.titleRes = R.string.summary_camera;
