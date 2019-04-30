@@ -52,14 +52,13 @@ class FloatingControlService : Service(), FloatingController {
         floatView = FloatView(application as TorScreenRecApp)
     }
 
-    override fun onStartCommand(intent: Intent, flags: Int, startId: Int): Int {
-
+    override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         val app = application as TorScreenRecApp
 
         if (SettingsCompat.canDrawOverlays(app.topActivity) || Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             try {
                 show()
-                return Service.START_STICKY
+                return START_STICKY
             } catch (e: Throwable) {
                 Toast.makeText(applicationContext, Log.getStackTraceString(e), Toast.LENGTH_LONG).show()
             }
@@ -74,7 +73,7 @@ class FloatingControlService : Service(), FloatingController {
 
         SettingsProvider.get()!!.putBoolean(SettingsProvider.Key.FLOAT_WINDOW, false)
 
-        return Service.START_STICKY
+        return START_STICKY
     }
 
 

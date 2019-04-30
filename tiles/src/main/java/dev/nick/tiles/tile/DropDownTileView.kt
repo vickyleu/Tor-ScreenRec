@@ -29,7 +29,8 @@ open class DropDownTileView : TileView {
         mSpinner = Spinner(context)
         mSpinner?.visibility = View.INVISIBLE
         mSpinner?.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(parent: AdapterView<*>, v: View, position: Int, id: Long) {
+
+            override fun onItemSelected(parent: AdapterView<*>, v: View?, position: Int, id: Long) {
                 setSelectedItem(position, true)
             }
 

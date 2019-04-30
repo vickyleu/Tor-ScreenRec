@@ -169,14 +169,20 @@ open class Command {
     }
 
     fun p_wait(){
-        obj.wait()
+        try {
+            obj.wait()
+        }catch (e:Exception){}
     }
     fun p_wait(time:Long){
-        obj.wait(time)
+        try {
+            obj.wait(time)
+        }catch (e:Exception){}
     }
 
     fun p_notifyAll(){
-        obj.notifyAll()
+        try {
+            obj.notifyAll()
+        }catch (e:Exception){}
     }
 
 
