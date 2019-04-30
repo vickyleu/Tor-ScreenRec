@@ -5,7 +5,7 @@ import android.graphics.PixelFormat;
 import android.graphics.Rect;
 import android.os.Build;
 import android.os.RemoteException;
-import android.support.v4.view.GestureDetectorCompat;
+import androidx.core.view.GestureDetectorCompat;
 import android.view.GestureDetector;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -16,7 +16,6 @@ import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.Observable;
 import java.util.Observer;

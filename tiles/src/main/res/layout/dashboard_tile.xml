@@ -67,7 +67,7 @@
         android:layout_alignParentBottom="true"
         android:layout_toEndOf="@+id/icon"
         android:layout_toRightOf="@+id/icon"
-        android:background="?android:attr/dividerVertical" />
+        android:background="?attr/dividerVertical" />
 
 
 </RelativeLayout>

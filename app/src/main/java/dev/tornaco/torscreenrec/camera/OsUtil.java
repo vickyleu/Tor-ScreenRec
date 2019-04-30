@@ -18,12 +18,12 @@ package dev.tornaco.torscreenrec.camera;
 
 import android.Manifest;
 import android.annotation.TargetApi;
-import android.app.Activity;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.UserHandle;
 import android.os.UserManager;
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 import java.util.Hashtable;
@@ -185,7 +185,7 @@ public class OsUtil {
 
     /**
      * Check if the app has the specified permission. If it does not, the app needs to use
-     * {@link android.app.Activity#requestPermissions(String[], int)}. Note that if it
+     * {@link AppCompatActivity#requestPermissions(String[], int)}. Note that if it
      * returns true, it cannot return false in the same process as the OS kills the process when
      * any permission is revoked.
      *
@@ -246,7 +246,7 @@ public class OsUtil {
     /**
      * Returns array with the set of permissions that have not been granted from the given set.
      * The array will be empty if the app has all of the specified permissions. Note that calling
-     * {@link Activity#requestPermissions} for an already granted permission can prompt the user
+     * {@link AppCompatActivity#requestPermissions} for an already granted permission can prompt the user
      * again, and its up to the app to only request permissions that are missing.
      */
     public static String[] getMissingPermissions(final String[] permissions) {

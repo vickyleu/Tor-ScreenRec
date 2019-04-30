@@ -17,7 +17,7 @@
 package dev.nick.tiles.widget;
 
 import android.content.Context;
-import android.support.v7.widget.SwitchCompat;
+import androidx.appcompat.widget.SwitchCompat;
 import android.util.AttributeSet;
 
 public class ToggleSwitch extends SwitchCompat {

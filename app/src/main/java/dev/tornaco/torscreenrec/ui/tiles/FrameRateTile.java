@@ -1,7 +1,7 @@
 package dev.tornaco.torscreenrec.ui.tiles;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.text.InputType;
 import android.util.Log;
 import android.widget.Toast;

@@ -4,17 +4,13 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.RemoteException;
-import android.support.annotation.IdRes;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AlertDialog;
+import androidx.annotation.IdRes;
+import androidx.appcompat.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.stericson.rootools.RootTools;
 
 import org.newstand.logger.Logger;
 
@@ -29,7 +25,6 @@ import dev.nick.tiles.tile.DashboardFragment;
 import dev.tornaco.torscreenrec.DrawerNavigatorActivity;
 import dev.tornaco.torscreenrec.R;
 import dev.tornaco.torscreenrec.TorScreenRecApp;
-import dev.tornaco.torscreenrec.bridge.Installer;
 import dev.tornaco.torscreenrec.common.SharedExecutor;
 import dev.tornaco.torscreenrec.control.RecRequestHandler;
 import dev.tornaco.torscreenrec.pref.SettingsProvider;

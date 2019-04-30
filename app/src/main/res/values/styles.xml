@@ -60,7 +60,7 @@
 
     <style name="BottomSummaryText" parent="@style/TextAppearance.AppCompat.Small">
         <item name="android:textColor">@color/third_text</item>
-        <item name="android:textAllCaps">false</item>
+        <item name="textAllCaps">false</item>
         <item name="android:paddingRight">@dimen/activity_horizontal_margin</item>
         <item name="android:paddingTop">@dimen/activity_horizontal_margin</item>
         <item name="android:paddingBottom">@dimen/activity_horizontal_margin</item>

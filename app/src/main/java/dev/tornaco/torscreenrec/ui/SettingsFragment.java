@@ -1,7 +1,7 @@
 package dev.tornaco.torscreenrec.ui;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import java.util.List;
 

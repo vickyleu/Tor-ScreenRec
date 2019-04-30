@@ -2,7 +2,7 @@ package dev.nick.tiles.tile;
 
 import android.content.Context;
 import android.os.Build;
-import android.support.annotation.ColorInt;
+import androidx.annotation.ColorInt;
 import android.util.AttributeSet;
 import android.widget.RelativeLayout;
 

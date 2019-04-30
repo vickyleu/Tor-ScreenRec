@@ -1,7 +1,7 @@
 package dev.tornaco.torscreenrec.ui.tiles;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.widget.RelativeLayout;
 
 import dev.nick.tiles.tile.QuickTile;

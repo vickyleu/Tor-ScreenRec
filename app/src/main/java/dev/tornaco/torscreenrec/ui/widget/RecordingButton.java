@@ -2,7 +2,7 @@ package dev.tornaco.torscreenrec.ui.widget;
 
 import android.content.Context;
 import android.content.res.Configuration;
-import android.support.design.widget.FloatingActionButton;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import android.util.AttributeSet;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;

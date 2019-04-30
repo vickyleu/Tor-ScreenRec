@@ -19,7 +19,7 @@ package dev.tornaco.torscreenrec.camera;
 import android.content.Context;
 import android.hardware.Camera;
 import android.os.Parcelable;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;

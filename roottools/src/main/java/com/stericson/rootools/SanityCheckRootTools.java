@@ -32,10 +32,10 @@ import android.os.StrictMode;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import com.stericson.rootools.containers.Permissions;
 import com.stericson.rootshell.exceptions.RootDeniedException;
 import com.stericson.rootshell.execution.Command;
 import com.stericson.rootshell.execution.Shell;
-import com.stericson.rootools.containers.Permissions;
 
 import java.io.IOException;
 import java.util.List;

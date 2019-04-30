@@ -3,7 +3,7 @@ package dev.tornaco.torscreenrec.loader;
 import android.content.Context;
 import android.database.Cursor;
 import android.provider.MediaStore;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.text.format.DateUtils;
 
 import java.io.File;

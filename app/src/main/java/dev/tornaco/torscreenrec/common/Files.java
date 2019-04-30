@@ -3,10 +3,10 @@ package dev.tornaco.torscreenrec.common;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Build;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.annotation.WorkerThread;
-import android.support.v4.content.FileProvider;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.WorkerThread;
+import androidx.core.content.FileProvider;
 
 import org.newstand.logger.Logger;
 
@@ -79,8 +79,8 @@ public abstract class Files {
 
     public static boolean deleteDir(File dir) {
         final boolean[] res = {true};
-        Collections.consumeRemaining(com.google.common.io.Files.fileTreeTraverser()
-                .postOrderTraversal(dir), new Consumer<File>() {
+        //noinspection UnstableApiUsage
+        Collections.consumeRemaining(com.google.common.io.Files.fileTraverser().depthFirstPostOrder(dir), new Consumer<File>() {
             @Override
             public void accept(@NonNull File file) {
                 if (!file.delete()) res[0] = false;
