@@ -24,18 +24,25 @@ object RecRequestHandler {
         val settingsProvider = SettingsProvider.get()
         try {
             RecBridgeServiceProxy.from(context)
-                    .start(IParam.builder()
+                    .start(
+                            IParam.builder()
                             .audioSource(settingsProvider!!.getInt(SettingsProvider.Key.AUDIO_SOURCE))
                             .frameRate(settingsProvider.getInt(SettingsProvider.Key.FAME_RATE))
                             .audioBitrate(settingsProvider.getInt(SettingsProvider.Key.AUDIO_BITRATE_RATE_K))
                             .orientation(settingsProvider.getInt(SettingsProvider.Key.ORIENTATION))
                             .resolution(settingsProvider.getString(SettingsProvider.Key.RESOLUTION))
+//                            .stopOnScreenOff(false)
                             .stopOnScreenOff(settingsProvider.getBoolean(SettingsProvider.Key.SCREEN_OFF_STOP))
+//                            .useMediaProjection(false)
                             .useMediaProjection(!isPlatformBridge)
+//                            .stopOnShake(false)
                             .stopOnShake(settingsProvider.getBoolean(SettingsProvider.Key.SHAKE_STOP))
+//                            .shutterSound(false)
                             .shutterSound(settingsProvider.getBoolean(SettingsProvider.Key.SHUTTER_SOUND))
                             .path(SettingsProvider.get()!!.createVideoFilePath())
+//                            .showNotification(false)
                             .showNotification(true)
+//                            .showTouch(true)
                             .showTouch(settingsProvider.getBoolean(SettingsProvider.Key.SHOW_TOUCH))
                             .build(),
 

@@ -39,7 +39,7 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'com.google.android.material:material:1.0.0'
     implementation 'androidx.cardview:cardview:1.0.0'
@@ -57,15 +57,11 @@ dependencies {
     implementation 'io.reactivex.rxjava2:rxjava:2.2.6'
     implementation 'de.hdodenhof:circleimageview:3.0.0'
     implementation 'com.github.bumptech.glide:glide:4.9.0'
-
     // https://github.com/javiersantos/MaterialStyledDialogs
     implementation 'com.github.javiersantos:MaterialStyledDialogs:2.1'
-
     // https://github.com/czy1121/settingscompat
     implementation 'com.github.czy1121:settingscompat:1.1.4'
-
     implementation 'com.nononsenseapps:filepicker:4.1.0'
-
     implementation 'com.koushikdutta.async:androidasync:2.2.1'
     implementation "androidx.core:core-ktx:1.0.1"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"

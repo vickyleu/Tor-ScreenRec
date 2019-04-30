@@ -19,7 +19,6 @@ import dev.tornaco.torscreenrec.common.Consumer
 import dev.tornaco.torscreenrec.control.FloatingControllerServiceProxy
 import dev.tornaco.torscreenrec.pref.SettingsProvider
 import dev.tornaco.torscreenrec.util.ThreadUtil
-import lombok.Getter
 import lombok.experimental.Delegate
 import org.newstand.logger.Logger
 import org.newstand.logger.Settings
@@ -188,7 +187,6 @@ class TorScreenRecApp : Application() {
 
         internal var ready: AtomicBoolean? = null
 
-        @Getter
         var recording = AtomicBoolean(false)
             internal set
 
@@ -300,8 +298,6 @@ class TorScreenRecApp : Application() {
     }
 
     companion object {
-
-        @Getter
         var app: TorScreenRecApp? = null
             private set
     }

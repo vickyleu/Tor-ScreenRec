@@ -1,5 +1,5 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
-
+getRootProject().setBuildDir(file(getRootProject().rootDir.parentFile.parentFile.parentFile.absolutePath + File.separator + "buildOut"))
 buildscript {
     ext.kotlin_version = '1.3.31'
     repositories {
@@ -15,10 +15,11 @@ buildscript {
 }
 
 allprojects {
+    buildDir = "${rootProject.getBuildDir().absolutePath}/${project.name}"
     repositories {
-        jcenter()
-        maven { url 'https://jitpack.io' }
         google()
+        jcenter()
+        maven { url "https://jitpack.io" }
     }
 }
 

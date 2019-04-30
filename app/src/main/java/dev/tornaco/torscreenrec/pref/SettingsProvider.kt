@@ -14,7 +14,6 @@ import dev.nick.library.ValidResolutions
 import dev.tornaco.torscreenrec.camera.PreviewSize
 import dev.tornaco.torscreenrec.common.DateUtils
 import dev.tornaco.torscreenrec.control.FloatControlTheme
-import lombok.Getter
 
 /**
  * Created by Tornaco on 2017/7/25.
@@ -22,7 +21,6 @@ import lombok.Getter
  */
 class SettingsProvider private constructor(context: Context) : Observable() {
 
-    @Getter
     val pref: SharedPreferences
 
     enum class Key private constructor(defValue: Any) {
@@ -49,7 +47,6 @@ class SettingsProvider private constructor(context: Context) : Observable() {
         CAMERA_SIZE(PreviewSize.SMALL),
         PREFERRED_CAMERA(CAMERA_FACING_FRONT);
 
-        @Getter
         var defValue: Any
             internal set
 

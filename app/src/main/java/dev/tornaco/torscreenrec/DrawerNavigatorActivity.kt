@@ -16,15 +16,12 @@ import dev.tornaco.torscreenrec.common.SharedExecutor
 import dev.tornaco.torscreenrec.pref.SettingsProvider
 import dev.tornaco.torscreenrec.ui.*
 import dev.tornaco.torscreenrec.ui.widget.RecordingButton
-import lombok.Getter
 
 class DrawerNavigatorActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
-    @Getter
     var cardController: FragmentController? = null
         private set
 
-    @Getter
     var floatingActionButton: RecordingButton? = null
         private set
 
